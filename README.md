@@ -40,6 +40,10 @@ my vim setup, plugins and .vimrc
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation)
   ycm安装过程请参考[link](https://github.com/yangyangwithgnu/use_vim_as_ide)
 - [syntastic](https://github.com/scrooloose/syntastic)
+- [rainbow parentheses](https://github.com/kien/rainbow_parentheses.vim)
+- [nerdTree](https://github.com/scrooloose/nerdtree)
+- [python syntax highlight](https://github.com/hdima/python-syntax)
+- [vim-pyflakes](https://github.com/nvie/vim-flake8.git)
 
 ##Theme
 
@@ -110,6 +114,11 @@ quickFix
 :cw
 :cn
 :cp
+```
+
+NerdTree
+```
+<Leader>fl #nerdTree toggle
 ```
 
 ##Reference

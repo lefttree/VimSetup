@@ -123,11 +123,11 @@ filetype indent on
 " 将制表符扩展为空格
 set expandtab
 " 设置编辑时制表符占用空格数
-set tabstop=2
+set tabstop=4
 " 设置格式化时制表符占用空格数
-set shiftwidth=2
+set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
-set softtabstop=2
+set softtabstop=4
 " 随 vim 自启动
 let g:indent_guides_enable_on_vim_startup=1
 " 从第二层开始可视化显示缩进
@@ -142,6 +142,12 @@ let g:indent_guides_guide_size=1
 set foldmethod=syntax
 " 启动 vim 时关闭折叠代码
 set nofoldenable
+
+"""python 
+autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType python setlocal foldmethod=indent
+"默认展开所有代码
+set foldlevel=99
 
 """"""""""""""
 " YCM
@@ -206,3 +212,26 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+
+"""""""""""""""""""""
+" Nerd Tree
+"""""""""""""""""""""
+" 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
+nmap <Leader>fl :NERDTreeToggle<CR>
+" 设置NERDTree子窗口宽度
+let NERDTreeWinSize=32
+" 设置NERDTree子窗口位置
+let NERDTreeWinPos="right"
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应 buffer
+let NERDTreeAutoDeleteBuffer=1
+
+"""""""""""""""""""""
+" python syntax
+"""""""""""""""""""""
+
+let python_highlight_all = 1
