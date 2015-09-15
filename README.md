@@ -34,16 +34,28 @@ my vim setup, plugins and .vimrc
 ###plugin list
 
 - [vim-powerline](https://github.com/Lokaltog/vim-powerline.git)
+    + power status line
 - [vim-indent-guide](https://github.com/nathanaelkane/vim-indent-guides.git)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
+    + easily comment/uncomment codes
 - [STL Syntax](https://github.com/Mizuchi/STL-Syntax.git)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation)
-  ycm安装过程请参考[link](https://github.com/yangyangwithgnu/use_vim_as_ide)
+    + ycm安装过程请参考[link](https://github.com/yangyangwithgnu/use_vim_as_ide)
 - [syntastic](https://github.com/scrooloose/syntastic)
+    + syntax check for vim
 - [rainbow parentheses](https://github.com/kien/rainbow_parentheses.vim)
+    + colorful parentheses
 - [nerdTree](https://github.com/scrooloose/nerdtree)
+    + browse file structure
 - [python syntax highlight](https://github.com/hdima/python-syntax)
 - [vim-pyflakes](https://github.com/nvie/vim-flake8.git)
+    + static syntax and style checker for python
+    + supersedes both `vim-pyflakes` and `vim-pep8`
+- [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc.git)
+- [DoxygenToolkit](http://www.vim.org/scripts/script.php?script_id=987)
+    + doc generator
+    + c/c++. python
+    + put in `/.vim/plugin`
 
 ##Theme
 
@@ -76,14 +88,14 @@ vit 选择一对 HTML/XML 的标签内部的所有字符
 vi" vi' vi` 选择一对引号字符 (" 或 ' 或 `) 中所有字符
 ```
 
-comment
+**comment**
 
 ```
 <leader>cc，注释当前选中文本，如果选中的是整行则在每行首添加 //，如果选中一行的部分内容则在选中部分前后添加分别 /、/；
 <leader>cu，取消选中文本块的注释。
 ```
 
-indent
+**indent**
 
 ```
 插入模式
@@ -94,7 +106,8 @@ indent
   < 、 > 用于左右缩进， n< 、 n> 可做多节缩进，如 2> 。
 ```
 
-跳转
+**跳转**
+
 ```
 跳转到定义
   gd到局部变量的定义，gD到全局变量的定义
@@ -108,7 +121,7 @@ indent
   Ctrl-O 在历史记录中后台，Ctrl-I 则为前进。
 ```
 
-quickFix
+**quickFix**
 
 ```
 :cw
@@ -116,10 +129,28 @@ quickFix
 :cp
 ```
 
-NerdTree
+**vim-flake8**
+
+press `<F7>` to run `flake8` on python file
+
+**NerdTree**
+
 ```
 <Leader>fl #nerdTree toggle
 ```
+
+**JsDoc**
+
+1. move cursor on `function` ketword line
+2. `:JsDoc`
+3. follow prompt to insert JSDoc
+
+**DoxygenToolkit**
+
+License `:DoxLic`
+Author `:DoxAuthor`
+Function/Class `:Dox`
+Group `:DoxBlock`
 
 ##Reference
 

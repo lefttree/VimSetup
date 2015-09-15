@@ -143,6 +143,8 @@ set foldmethod=syntax
 " 启动 vim 时关闭折叠代码
 set nofoldenable
 
+set colorcolumn=80
+
 """python 
 autocmd FileType python setlocal et sta sw=4 sts=4
 autocmd FileType python setlocal foldmethod=indent
@@ -235,3 +237,23 @@ let NERDTreeAutoDeleteBuffer=1
 """""""""""""""""""""
 
 let python_highlight_all = 1
+
+"""""""""""""""""""""
+" jsdoc
+"""""""""""""""""""""
+
+let g:jsdoc_allow_input_prompt=1
+let g:jsdoc_input_description=1
+let g:jsdoc_additional_descriptions=1
+let g:jsdoc_underscore_private=1
+
+"""""""""""""""""""""
+" DoxygenToolkit
+"""""""""""""""""""""
+
+let g:DoxygenToolkit_briefTag_pre="@Synopsis  " 
+let g:DoxygenToolkit_paramTag_pre="@Param " 
+let g:DoxygenToolkit_returnTag="@Returns   " 
+let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------" 
+let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------" 
+let g:DoxygenToolkit_authorName="Xiang Li" 
