@@ -3,7 +3,8 @@ my vim setup, plugins and .vimrc
 
 ##To Do
 
-add install script to automatically setup on new system
+1. add install script to automatically setup on new system
+   like [k-vim](https://github.com/wklken/k-vim)
 
 ##Compile Vim from source
 
@@ -98,6 +99,17 @@ add install script to automatically setup on new system
 
 
 ##Short-Cuts
+
+**search**
+
+search for where cursor is
+
+`<shift> + #` search for next occurance
+`<shift> + *` search for previous occurance
+
+
+**insert**
+
 ```
 ci[ 删除一对 [] 中的所有字符并进入插入模式
 ci( 删除一对 () 中的所有字符并进入插入模式
