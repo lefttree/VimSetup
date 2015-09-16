@@ -4,6 +4,11 @@ let mapleader=";"
 set clipboard=unnamedplus
 set nocompatible "不要vim模仿vi模式
 
+"make gnome terminal supports 256 colors
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 " 开启文件类型侦测
 filetype on
 " 根据侦测到的不同类型加载对应的插件
@@ -68,8 +73,8 @@ syntax on
 " theme
 """'"""""""""
 set background=dark
-" colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+" colorscheme molokai
 
 " font
 set guifont=YaHei\ Consolas\ Hybrid\ 18
@@ -112,8 +117,9 @@ set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
 
-" 设置状态栏主题风格, works with vim-powerline
-let g:Powerline_colorscheme='solarized256'
+" 设置状态栏主题风格, works with vim-airline
+" let g:airline_theme='solarized'
+let g:airline_theme='molokai'
 
 """"""""""""""
 " indent
@@ -251,9 +257,35 @@ let g:jsdoc_underscore_private=1
 " DoxygenToolkit
 """""""""""""""""""""
 
-let g:DoxygenToolkit_briefTag_pre="@Synopsis  " 
+let g:DoxygenToolkit_briefTag_pre="@Xiang  " 
 let g:DoxygenToolkit_paramTag_pre="@Param " 
 let g:DoxygenToolkit_returnTag="@Returns   " 
 let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------" 
 let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------" 
 let g:DoxygenToolkit_authorName="Xiang Li" 
+
+
+""""""""""""""""""""
+" tagbar
+""""""""""""""""""""
+
+nmap <F8> :TagbarToggle<CR>
+
+""""""""""""""""""""
+" ultisnips
+""""""""""""""""""""
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-x>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:ycm_use_ultisnips_completer=1
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+""""""""""""""""""""
+" vim-javascript
+""""""""""""""""""""
+
+let g:javascript_enable_domhtmlcss=1

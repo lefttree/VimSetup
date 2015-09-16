@@ -33,7 +33,7 @@ my vim setup, plugins and .vimrc
 
 ###plugin list
 
-- [vim-powerline](https://github.com/Lokaltog/vim-powerline.git)
+- [vim-airline](https://github.com/bling/vim-airline)
     + power status line
 - [vim-indent-guide](https://github.com/nathanaelkane/vim-indent-guides.git)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
@@ -55,7 +55,23 @@ my vim setup, plugins and .vimrc
 - [DoxygenToolkit](http://www.vim.org/scripts/script.php?script_id=987)
     + doc generator
     + c/c++. python
-    + put in `/.vim/plugin`
+    + put in `~/.vim/plugin`
+- [tagbar](https://github.com/majutsushi/tagbar)
+    + browse the tags of the current file and get an overview of its structure
+    + uses `ctags`
+- [tag list](https://github.com/vim-scripts/taglist.vim)
+    + put in `~/.vim/plugin` and `~/.vim/doc`
+    + uses `ctags`
+- [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
+- [vim-easymotion](https://github.com/easymotion/vim-easymotion)
+    + very cool, jump into any position
+- [ultisnips](https://github.com/SirVer/ultisnips)
+    + insert customized code
+- [delemitMate](https://github.com/Raimondi/delimitMate)
+    + automatic add closing quotes, parenthesis, brackets....
+- [vim-surround](https://github.com/tpope/vim-surround)
+- [vim-markdown](https://github.com/plasticboy/vim-markdown)
+- [vim-javascript]( git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript)
 
 ##Theme
 
@@ -152,6 +168,51 @@ Author `:DoxAuthor`
 Function/Class `:Dox`
 Group `:DoxBlock`
 
+**Tagbar**
+
+`<F8>`
+
+```
+nmap <F8> :TagbarToggle<CR>
+```
+
+**Taglist**
+
+```
+:TlistToggle
+```
+
+**easy motion**
+
+```
+<Leader><Leader> w
+<Leader><Leader> fe //search for e
+```
+
+**vim-surround**
+
+delete use `ds`
+change use `cs`
+`ys` takes a valid Vim motion or text object as the first object, and wraps       
+it using the second argument as with cs.  (It's a stretch, but a good           
+mnemonic for "ys" is "you surround".)
+
+It's easiest to explain with examples. Press `cs"'` inside
+
+`"Hello world!"`
+to change it to
+
+`'Hello world!'`
+
+To remove the delimiters entirely, press `ds'`.
+
+`Hello world!`
+
+**vim expand**
+
+`+` to expand
+`-` to shrink
+
 ##Reference
 
 - [use vim as a ide](https://github.com/yangyangwithgnu/use_vim_as_ide)
@@ -159,3 +220,4 @@ Group `:DoxBlock`
 - [用vim编程-配置与技巧](http://linux-wiki.cn/wiki/zh-hans/%E7%94%A8Vim%E7%BC%96%E7%A8%8B%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8A%80%E5%B7%A7)
 - [配置基于vim的python变成环境](http://linux-wiki.cn/wiki/%E9%85%8D%E7%BD%AE%E5%9F%BA%E4%BA%8EVim%E7%9A%84Python%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83)
 - [linux my vim](http://www.wklken.me/posts/2013/06/11/linux-my-vim.html)
+- [简明vim练级攻略](http://coolshell.cn/articles/5426.html)
