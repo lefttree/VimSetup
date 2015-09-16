@@ -143,19 +143,42 @@ let g:indent_guides_guide_size=1
 " 快捷键 i 开/关缩进可视化
 :nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 
+""""""""""""""""""""""""""'
 " 基于缩进或语法进行代码折叠
-"set foldmethod=indent
-set foldmethod=syntax
+"""""""""""""""""""""""""""
+
+" set foldmethod=indent
+" set foldmethod=syntax
 " 启动 vim 时关闭折叠代码
 set nofoldenable
 
 set colorcolumn=80
+
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+
 
 """python 
 autocmd FileType python setlocal et sta sw=4 sts=4
 autocmd FileType python setlocal foldmethod=indent
 "默认展开所有代码
 set foldlevel=99
+
+""""""""""""""""""""
+" javascript fold
+""""""""""""""""""""
+function! JavaScriptFold() 
+    setl foldmethod=syntax
+    setl foldlevelstart=1
+    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+    function! FoldText()
+        return substitute(getline(v:foldstart), '{.*', '{...}', '')
+    endfunction
+    setl foldtext=FoldText()
+endfunction
+au FileType javascript call JavaScriptFold()
+au FileType javascript setl fen
 
 """"""""""""""
 " YCM
@@ -283,6 +306,8 @@ let g:ycm_use_ultisnips_completer=1
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+" add snippets dir
+let g:UltiSnipsSnippetDirectories=["bundle/vim-snippets/UltiSnips"]
 
 """"""""""""""""""""
 " vim-javascript

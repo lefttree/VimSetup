@@ -1,6 +1,10 @@
 # Vim Setup
 my vim setup, plugins and .vimrc
 
+##To Do
+
+add install script to automatically setup on new system
+
 ##Compile Vim from source
 
 系统自带的vim往往功能有阉割（我的ubuntu 14.04就没有clipboard支持），所以一般我们需要compile from source, 一般使用Vim 7.4+
@@ -67,11 +71,19 @@ my vim setup, plugins and .vimrc
     + very cool, jump into any position
 - [ultisnips](https://github.com/SirVer/ultisnips)
     + insert customized code
+    + use [vim-snippets](https://github.com/honza/vim-snippets.git)
 - [delemitMate](https://github.com/Raimondi/delimitMate)
     + automatic add closing quotes, parenthesis, brackets....
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [vim-javascript]( git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript)
+- [vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
+- [tabular](https://github.com/godlygeek/tabular)
+
+- [emmet](https://github.com/mattn/emmet-vim)
+    + html edit, learn the syntax from their site
+- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
+- [simplyFold](https://github.com/tmhedberg/SimpylFold)
 
 ##Theme
 
@@ -212,6 +224,10 @@ To remove the delimiters entirely, press `ds'`.
 
 `+` to expand
 `-` to shrink
+
+**emmet**
+
+[tutorial](https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL)
 
 ##Reference
 
