@@ -14,6 +14,11 @@ my vim setup, plugins and .vimrc
 
 上面那个blog compile的vim有可能没有clipboard support，这篇[blog](https://kowalcj0.wordpress.com/2013/11/19/how-to-compile-and-install-latest-version-of-vim-with-support-for-x11-clipboard-ruby-python-2-3/)讲了如何更好地compile vim
 
+###Install on Mac(stackoverflow)
+
+Download the latest MacVim which comes with a very complete vim executable and use it in Terminal.app like so.
+
+`alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'`
 
 ##插件管理
 
@@ -92,6 +97,10 @@ my vim setup, plugins and .vimrc
 将solarized.vim copy到`~/.vim/colors/`, 然后在`.vimrc`中设置其为theme
 
 想换的可以到这个[网站](http://vimcolors.com/)
+
+###Mac Iterm color settings
+
+if you iterm doesn't show correct color, see this [stackoverflow link](http://stackoverflow.com/questions/7278267/incorrect-colors-with-vim-in-iterm2-using-solarized)
 
 ##Fonts
 
