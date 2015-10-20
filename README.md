@@ -90,6 +90,7 @@ Download the latest MacVim which comes with a very complete vim executable and u
     + html edit, learn the syntax from their site
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
 - [simplyFold](https://github.com/tmhedberg/SimpylFold)
+- [jslint](https://github.com/hallettj/jslint.vim)
 
 ##Theme
 
@@ -249,6 +250,11 @@ To remove the delimiters entirely, press `ds'`.
 **emmet**
 
 [tutorial](https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL)
+
+**Jslint**
+
+- `:JSLintUpdate`
+- `:JSLintToggle`
 
 ##Reference
 
