@@ -251,6 +251,11 @@ To remove the delimiters entirely, press `ds'`.
 
 [tutorial](https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL)
 
+**Jslint**
+
+- `:JSLintUpdate`
+- `:JSLintToggle`
+
 ##Reference
 
 - [use vim as a ide](https://github.com/yangyangwithgnu/use_vim_as_ide)
