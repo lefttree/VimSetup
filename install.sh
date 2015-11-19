@@ -19,13 +19,15 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.vimrc.bundles; do [ -e $i 
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.vimrc.bundles; do [ -L $i ] && unlink $i ; done
 
 echo "------------------------------------"
-echo "Step2: setting up symlinks"
+echo "Step2: copy color theme and setting up symlinks for vimrc"
 echo "------------------------------------"
+if [ ! -e $HOME/.vim ]; then
+    mkdir -p $HOME/.vim
+fi
+cp -r $CURRENT_DIR/colors $HOME/.vim/colors
 lnif $CURRENT_DIR/vimrc $HOME/.vimrc
 #lnif $CURRENT_DIR/vimrc.bundles $HOME/.vimrc.bundles
 #lnif "$CURRENT_DIR/" "$HOME/.vim"
-cp -r $CURRENT_DIR/colors $HOME/.vim/colors
-
 
 echo "------------------------------------"
 echo "Step3: install pathogen"
@@ -50,15 +52,21 @@ do
 done < "pluginList"
 cd -
 
+echo "------------------------------------"
 echo "Step5: compile YouCompleteMe"
+echo "------------------------------------"
+echo "It will take a long time, just be patient!"
+echo "If error, please compile it yourself"
+cd $HOME/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe && git submodule update --init --recursive && ./install.py --clang-completer
 
-#
-# youcompleteme
-# DoxygenTooklit
-# pyflake
-# tagbar
-# tag list
-# ultisnips
-#
-
-echo "Install Done"
+echo "------------------------------------"
+echo "Installation Done!"
+echo ""
+echo "Plugins you need to install by yourself:"
+echo "  1. pyflakes - need to install flake8 package"
+echo "  2. tagbar   - need ctags"
+echo "  3. tag list - need ctags"
+echo "  4. ultisnips"
+echo "  5. DoxygenTooklit"
+echo "------------------------------------"
