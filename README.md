@@ -1,10 +1,11 @@
 # Vim Setup
 my vim setup, plugins and .vimrc
 
-##To Do
+## How to Install
 
-1. add install script to automatically setup on new system
-   like [k-vim](https://github.com/wklken/k-vim)
+1. You need to compile vim by yourself first
+
+2. `./install.sh`, it would install the plugins and color theme
 
 ##Compile Vim from source
 
